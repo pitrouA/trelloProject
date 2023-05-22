@@ -21,3 +21,13 @@ Creation d'un espace
     Click Element    data:testid:header-create-team-submit-button
     Wait Until Element Is Visible    data:testid:show-later-button
     Click Element    data:testid:show-later-button
+
+Choisir un tableau
+    Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
+    Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
+    Click Element    class:boards-page-board-section-header-options-item
+    Click Link    /b/gpqLxENv/project-2
+    Wait Until Element Is Visible    class:placeholder
+    Click Element    class:placeholder
+    Input Text    class:list-name-input    ToDoList
+    Press Keys    class:list-name-input    RETURN
