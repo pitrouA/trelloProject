@@ -1,9 +1,3 @@
-*** Settings ***
-Library    SeleniumLibrary
-
-*** Variables ***
-${baseUrl}=       https://trello.com/
-
 *** Keywords ***
 
 Se Connecter Au Site
