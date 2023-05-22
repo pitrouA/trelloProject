@@ -1,10 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    FakerLibrary
+Resource  ../config.robot
 
 *** Variables ***
 ${string1}=   GGG $ JJJ $ KKK
-${baseUrl}=       https://trello.com/
 
 *** Keywords ***
 Eqa
