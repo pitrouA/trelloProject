@@ -1,16 +1,7 @@
 *** Settings ***
 Resource   login/testsLogin.robot
-Resource   ttt/testsLogin2.robot
-
+Test Setup    Open Browser    ${baseUrl}    chrome  
 *** Test Cases ***
-Validate Equal String
-    Equal String
+login
+    Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
 
-Open base page ad
-    Open Base Page
-
-Eqa
-    Eqa
-
-Opa
-    Opa
