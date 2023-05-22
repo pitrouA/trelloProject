@@ -24,3 +24,9 @@ Ajouter une liste
     Click Element    class:placeholder
     Input Text    class:list-name-input    ToDoList
     Press Keys    class:list-name-input    RETURN
+
+Ajouter une carte
+    Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
+    Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
+    Click Element    class:boards-page-board-section-header-options-item
+    Click Link    /b/gpqLxENv/project-2
