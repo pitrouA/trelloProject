@@ -3,13 +3,17 @@
 Resource  config.robot
 Resource   login/testsLogin.robot
 Resource   anotherTest/testsLogin2.robot
+Resource   userCases/create/create.robot
 
 Test Setup    Open Browser    ${baseUrl}    ${browser}
 
 *** Test Cases ***
 
 login
-    Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
+    Se Connecter Au Site    ${username}    ${password}
 
 Another Test
-    Another Test    sarah.556@hotmail.fr    wild4Ever
+    Another Test    ${username}    ${password}
+
+Creation d'un espace
+    Creation dun espace

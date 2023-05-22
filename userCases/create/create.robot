@@ -1,15 +1,11 @@
 *** Settings ***
 
-Resource  config.robot
-Resource   login/testsLogin.robot
-Resource   anotherTest/testsLogin2.robot
+Resource  ../../config.robot
 
-Test Setup    Open Browser    ${baseUrl}    ${browser}
+*** Keywords ***
 
-*** Test Cases ***
-
-Creation d'un espace
-    Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
+Creation dun espace
+    Se Connecter Au Site    ${username}    ${password}
     Wait Until Element Is Visible    data:testid:header-create-menu-button
     Click Element    data:testid:header-create-menu-button
     Wait Until Element Is Visible    data:testid:header-create-team-button
