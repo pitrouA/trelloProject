@@ -15,7 +15,7 @@ Creation dun espace
     Wait Until Element Is Visible    data:testid:show-later-button
     Click Element    data:testid:show-later-button
 
-Choisir un tableau
+Ajouter une liste
     Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
     Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
     Click Element    class:boards-page-board-section-header-options-item
