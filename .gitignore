@@ -3,3 +3,6 @@
 token
 *.log
 *.png
+
+#Ignore from Samuel env
+.DS_Store

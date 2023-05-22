@@ -1,8 +1,26 @@
 *** Settings ***
+Library    SeleniumLibrary
+
+Resource  config.robot
 Resource   login/testsLogin.robot
-Test Setup    Open Browser    ${baseUrl}    chrome  
+Resource   anotherTest/testsLogin2.robot
+Resource   userCases/create/create.robot
+
+Suite Setup       Open Browser    ${baseUrl}    ${browser}
+Suite Teardown    Close Browser
+
 *** Test Cases ***
+
 login
+    Se Connecter Au Site    ${username}    ${password}
+
+Another Test
+    Another Test    ${username}    ${password}
+
+Creation d'un espace
+    Creation dun espace
+
+User Case 
     Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
     # Modifier le titre d'un espace de travail 
     Wait Until Element Is Visible    class:Wl2FeSr_eBix8W
@@ -30,4 +48,3 @@ login
     Press Keys    data:testid:board-name-container    project-1 
     Click Element    data:testid:workspace-boards-and-views-lists
 
-     
