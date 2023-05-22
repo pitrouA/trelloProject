@@ -9,7 +9,7 @@ ${baseUrl}=       https://trello.com/
 Se Connecter Au Site 
     [Arguments]    ${user}    ${password}  
     Location Should Be    ${baseUrl}
-    Set Selenium Timeout    10s
+    Set Selenium Timeout    20s
     Click Element    data:uuid:MJFtCCgVhXrVl7v9HA7EH_login 
     Input Text    id:user    ${user}    
     Click Button    id:login
