@@ -7,6 +7,7 @@ Resource   anotherTest/testsLogin2.robot
 Resource   userCases/create/create.robot
 Resource   userCases/modif/modifEspace.robot
 Resource   dashboard/deconnexion.robot
+Resource   delete.robot
 
 Suite Setup       SetupEnv
 Suite Teardown    TearDownEnv
@@ -21,6 +22,9 @@ Another Test
 
 Creation d'un espace
     Creation dun espace
+
+Supprimer un espace
+    Supprimer un espace
 
 Se Deconnecter
     Se Deconnecter
