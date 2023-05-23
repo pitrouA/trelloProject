@@ -24,12 +24,12 @@ Ajouter une liste depuis le dashboard
     Input Text    class:list-name-input    Créer une liste
     Press Keys    class:list-name-input    RETURN
 
-Ajouter une liste depuis le tableau
-    Go To    ${project1}
-    Wait Until Element Is Visible    class:placeholder
-    Click Element    class:placeholder
+Ajouter une liste
+    Wait Until Element Is Visible    class:js-add-list
+    Click Element    class:js-add-list
     Input Text    class:list-name-input    Créer une liste
-    Press Keys    class:list-name-input    RETURN
+    Click Element    class:nch-button
+    # Press Keys    class:list-name-input    RETURN
 
 #creer une liste de cartes
 #     Click Element    class:js-add-list
@@ -38,7 +38,7 @@ Ajouter une liste depuis le tableau
 #     Sleep    3
 
 Créer une checklist
-    Go To    ${project1}
+    Location Should Be    ${project1}
     Click Link    /c/Hp3WGpZb/3-carte-1
     Wait Until Element Is Visible    class:js-add-checklist-menu
     Click Element    class:js-add-checklist-menu
@@ -63,8 +63,7 @@ Ajouter une carte depuis le dashboard
     Input Text    css:div.card-composer textarea    Créer une carte
     Click Element    css:div.card-composer input
 
-Ajouter une carte depuis le tableau
-    Go To    ${project1}
+Ajouter une carte
     Wait Until Element Is Visible    class:list-header-extras
     Click Element    class:list-header-extras
     Wait Until Element Is Visible    class:js-add-card
@@ -73,7 +72,7 @@ Ajouter une carte depuis le tableau
     Click Element    css:div.card-composer input
 
 Ajouter un tableau
-    Go To    ${workspace}
+    Wait Until Element Is Visible    data:testid:create-board-tile 
     Click Element    data:testid:create-board-tile
     Wait Until Element Is Visible    data:testid:create-board-title-input
     Input Text    data:testid:create-board-title-input    Créer Tableau
