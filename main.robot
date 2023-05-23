@@ -4,8 +4,9 @@ Library    SeleniumLibrary
 Resource  config.robot
 Resource   login/login.robot
 Resource   anotherTest/testsLogin2.robot
-Resource   userCases/create/create.robot
-Resource   userCases/modif/modifEspace.robot
+Resource   userCases/create.robot
+Resource   userCases/modifEspace.robot
+Resource   userCases/delete.robot
 Resource   dashboard/deconnexion.robot
 
 Suite Setup       SetupEnv
