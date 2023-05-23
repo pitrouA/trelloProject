@@ -14,7 +14,7 @@ Creation dun espace
     Wait Until Element Is Visible    data:testid:show-later-button
     Click Element    data:testid:show-later-button
 
-Ajouter une liste
+Ajouter une liste depuis le dashboard
     Go To    ${dashboard}
     Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
     Click Element    class:boards-page-board-section-header-options-item
@@ -24,33 +24,47 @@ Ajouter une liste
     Input Text    class:list-name-input    Créer une liste
     Press Keys    class:list-name-input    RETURN
 
-    ####          creer une liste de cartes
-    # Click Element    class:js-add-list
-    # Input Text    class:list-name-input    list-1
-    # Click Element    class:nch-button
-    # Sleep    3
+Ajouter une liste depuis le tableau
+    Go To    ${project1}
+    Wait Until Element Is Visible    class:placeholder
+    Click Element    class:placeholder
+    Input Text    class:list-name-input    Créer une liste
+    Press Keys    class:list-name-input    RETURN
 
-     #####creer une checklist
+#creer une liste de cartes
+#     Click Element    class:js-add-list
+#     Input Text    class:list-name-input    list-1
+#     Click Element    class:nch-button
+#     Sleep    3
+
+Créer une checklist
+    Go To    ${project1}
     Click Link    /c/Hp3WGpZb/3-carte-1
     Wait Until Element Is Visible    class:js-add-checklist-menu
     Click Element    class:js-add-checklist-menu
     Clear Element Text    id:id-checklist
     Input Text    id:id-checklist    to_do_list
-    Click Element    class:js-add-checklist 
-    #####    creer un element dans la checklist  
+    Click Element    class:js-add-checklist
+    # Ajouter un element dans la checklist  
     Click Element   class:js-new-checklist-item-button
     Input Text    class:checklist-new-item-text    write scenrios
     Click Button    class:js-add-checklist-item
-    Sleep    4
-    #####   supprimer une chekclist 
-    Click Element    class:js-confirm-delete
-    Click Element    class:js-confirm 
-Ajouter une carte
+
+Ajouter une carte depuis le dashboard
     Go To    ${dashboard}
     Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
     Click Element    class:boards-page-board-section-header-options-item
     Wait Until Location Contains    espacedetravailuser
     Click Link    /b/OqwuHIp8/project-1
+    Wait Until Element Is Visible    class:list-header-extras
+    Click Element    class:list-header-extras
+    Wait Until Element Is Visible    class:js-add-card
+    Click Element    class:js-add-card
+    Input Text    css:div.card-composer textarea    Créer une carte
+    Click Element    css:div.card-composer input
+
+Ajouter une carte depuis le tableau
+    Go To    ${project1}
     Wait Until Element Is Visible    class:list-header-extras
     Click Element    class:list-header-extras
     Wait Until Element Is Visible    class:js-add-card
