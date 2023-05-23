@@ -1,8 +1,7 @@
 *** Keywords ***
 
 Creation dun espace
-    Go To    https://trello.com/
-    Se Connecter Au Site    ${username}    ${password}
+    Go To    https://trello.com/w/formationwildcodeschool1/home
     Wait Until Element Is Visible    data:testid:header-create-menu-button
     Click Element    data:testid:header-create-menu-button
     Wait Until Element Is Visible    data:testid:header-create-team-button
