@@ -1,8 +1,7 @@
 *** Keywords ***
 
 Creation dun espace
-    Go To    https://trello.com/
-    Se Connecter Au Site    ${username}    ${password}
+    Go To    ${dashboard}
     Wait Until Element Is Visible    data:testid:header-create-menu-button
     Click Element    data:testid:header-create-menu-button
     Wait Until Element Is Visible    data:testid:header-create-team-button
