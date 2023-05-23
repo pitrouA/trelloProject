@@ -1,6 +1,6 @@
 *** Keywords ***
 
-Ajouter une liste depuis le dashboard
+Ajouter liste dashboard
     Go To    ${dashboard}
     Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
     Click Element    class:boards-page-board-section-header-options-item

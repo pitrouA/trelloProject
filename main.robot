@@ -2,23 +2,20 @@
 Library    SeleniumLibrary
 
 Resource  config.robot
-Resource   carte/ajoutListeTableau.robot
-Resource   carte/createChecklist.robot
-Resource   dashboard/ajoutCarteDashboard.robot
-Resource   dashboard/ajoutListDashboard.robot
+Resource   dashboard/ajoutTableau.robot
 Resource   dashboard/creationEspace.robot
 Resource   dashboard/deconnexion.robot
 Resource   dashboard/modifierDashboard.robot
+Resource   dashboard/modifierTitreTableau.robot
 Resource   login/login.robot
 Resource   tableau/ajoutCarteTableau.robot
-Resource   tableau/ajoutTableau.robot
-Resource   tableau/modifierTitreTableau.robot
-Resource   tableau/supprimerChecklist.robot
-Resource   tableau/ajoutTableau.robot
+Resource   tableau/ajoutListeTableau.robot
+Resource   userCases/ajoutCarteDashboard.robot
+Resource   userCases/ajoutListDashboard.robot
 Resource   userCases/create.robot
-Resource   userCases/modifEspace.robot
+Resource   userCases/createChecklist.robot
 Resource   userCases/delete.robot
-#Resource   userCases/totalOperationsToCreateChecklist.robot
+Resource   userCases/supprimerChecklist.robot
 
 Suite Setup       SetupEnv
 Suite Teardown    TearDownEnv
@@ -31,8 +28,11 @@ Modifier le titre d'un espace de travail
 Creation d'un espace
     Creation dun espace
 
-#Creation dune checklist totale
-#    Creation dune checklist totale
+Ajouter une liste depuis le dashboard
+    Ajouter liste dashboard
+
+Ajouter une carte depuis le dashboard
+    Ajouter carte dashboard
 
 *** Keywords ***
 
