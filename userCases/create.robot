@@ -1,29 +1,5 @@
 *** Keywords ***
 
-Creation dun espace
-    Go To    ${dashboard}
-    Wait Until Element Is Visible    data:testid:header-create-menu-button
-    Click Element    data:testid:header-create-menu-button
-    Wait Until Element Is Visible    data:testid:header-create-team-button
-    Click Element    data:testid:header-create-team-button
-    Wait Until Element Is Visible    data:testid:header-create-team-name-input
-    Input Text    data:testid:header-create-team-name-input    Space X
-    Click Element    data:testid:header-create-team-type-input
-    Click Element    data:testid:header-create-team-type-input-operations
-    Click Element    data:testid:header-create-team-submit-button
-    Wait Until Element Is Visible    data:testid:show-later-button
-    Click Element    data:testid:show-later-button
-
-Ajouter une liste depuis le dashboard
-    Go To    ${dashboard}
-    Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
-    Click Element    class:boards-page-board-section-header-options-item
-    Click Link    /b/OqwuHIp8/project-1
-    Wait Until Element Is Visible    class:placeholder
-    Click Element    class:placeholder
-    Input Text    class:list-name-input    Créer une liste
-    Press Keys    class:list-name-input    RETURN
-
 Ajouter une liste depuis le tableau
     Go To    ${project1}
     Wait Until Element Is Visible    class:placeholder
@@ -36,19 +12,6 @@ Ajouter une liste depuis le tableau
 #     Input Text    class:list-name-input    list-1
 #     Click Element    class:nch-button
 #     Sleep    3
-
-Créer une checklist
-    Go To    ${project1}
-    Click Link    /c/Hp3WGpZb/3-carte-1
-    Wait Until Element Is Visible    class:js-add-checklist-menu
-    Click Element    class:js-add-checklist-menu
-    Clear Element Text    id:id-checklist
-    Input Text    id:id-checklist    to_do_list
-    Click Element    class:js-add-checklist
-    # Ajouter un element dans la checklist  
-    Click Element   class:js-new-checklist-item-button
-    Input Text    class:checklist-new-item-text    write scenrios
-    Click Button    class:js-add-checklist-item
 
 Ajouter une carte depuis le dashboard
     Go To    ${dashboard}
