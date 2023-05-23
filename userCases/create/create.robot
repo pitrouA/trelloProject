@@ -1,8 +1,7 @@
 *** Keywords ***
 
 Creation dun espace
-    Go To    https://trello.com/
-    Se Connecter Au Site    ${username}    ${password}
+    Go To    ${dashboard}
     Wait Until Element Is Visible    data:testid:header-create-menu-button
     Click Element    data:testid:header-create-menu-button
     Wait Until Element Is Visible    data:testid:header-create-team-button
@@ -46,3 +45,15 @@ Ajouter une liste
     #####   supprimer une chekclist 
     Click Element    class:js-confirm-delete
     Click Element    class:js-confirm 
+Ajouter une carte
+    Se Connecter Au Site    sarah.556@hotmail.fr    wild4Ever
+    Wait Until Element Is Visible    class:boards-page-board-section-header-options-item
+    Click Element    class:boards-page-board-section-header-options-item
+    Wait Until Location Contains    espacedetravailuser
+    Click Link    /b/gpqLxENv/project-2
+    Wait Until Element Is Visible    class:list-header-extras
+    Click Element    class:list-header-extras
+    Wait Until Element Is Visible    class:js-add-card
+    Click Element    class:js-add-card
+    Input Text    css:div.card-composer textarea    Cartes à puces
+    Click Element    css:div.card-composer input
