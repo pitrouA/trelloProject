@@ -13,14 +13,14 @@ Suite Teardown    TearDownEnv
 
 *** Test Cases ***
 
-#Modifier le titre d'un espace de travail
-#    Modifier Espace
+Modifier le titre d'un espace de travail
+    Modifier Espace
 
-#Another Test
-#    Another Test    ${username}    ${password}
+Another Test
+    Another Test    ${username}    ${password}
 
-#Creation d'un espace
-#    Creation dun espace
+Creation d'un espace
+    Creation dun espace
 
 Se Deconnecter
     Se Deconnecter
