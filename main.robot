@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 Resource  config.robot
-Resource   login/testsLogin.robot
+Resource   login/login.robot
 Resource   anotherTest/testsLogin2.robot
 Resource   userCases/create/create.robot
 Resource   userCases/modif/modifEspace.robot

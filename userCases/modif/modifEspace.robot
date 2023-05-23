@@ -9,16 +9,8 @@ Modifier Espace
     Input Text    id:displayName    Projet-entreprise-WCS
     Wait Until Element Is Visible    class:_wJD3QSFJjW4Pb
     Click Button    class:_wJD3QSFJjW4Pb
-    Sleep    2
-    ####          creer un tableau
-    # Click Element    data:testid:create-board-tile
-    # Wait Until Element Is Visible    data:testid:create-board-title-input
-    # Input Text    data:testid:create-board-title-input    table-1
-    # Wait Until Element Is Enabled    data:testid:create-board-submit-button
-    # Click Button    data:testid:create-board-submit-button
-
-    Sleep    2
-    ####           modifier le titre de tableau
+Modifier le titre de tableau
+    Go To ${workspace}
     Click Link    /b/OqwuHIp8/project-1
     Wait Until Element Is Visible    data:testid:board-name-container
     Click Element    data:testid:board-name-container
